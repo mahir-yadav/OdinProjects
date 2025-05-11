@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: auto;
+    /* outline: 2px solid red; */
+}
+
+body {
+    font-family: Roboto;
+}
+
+#header {
+    background-color: #1f2937;
+    height: 100px;
+    display: flex;
+
+}
+
+#nav-bar {
+    text-decoration: none;
+    color: #E5E7EB;
+    font-size: 24px;
+    display: flex;
+    gap: 32px;
+}
+
+a {
+    text-decoration: none;
+    color: #E5E7EB;
+    font-size: 24px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #E5E7EB;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#bio {
+    background-color: #1f2937;
+    height: 400px;
+    display: flex;
+}
+
+.biobody {
+
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+}
+
+.bio-left {
+    width: 50%;
+}
+
+
+.button {
+    background-color: #3882F6;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Roboto;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 35px;
+    color: #E5E7EB;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.bio-right img {
+
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+h1 {
+    color: #E5E7EB;
+    font-size: 48px;
+}
+
+p {
+    color: #E5E7EB;
+    font-size: 16px;
+}
+
+.prod {
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+}
+
+.shoes-container {
+    margin-top: 16px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.shoes {
+    text-align: center;
+    margin: 20px;
+    width: 200px;
+}
+
+.shoes img {
+    border: 3px solid #3882F6;
+    border-radius: 20px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.shoes p {
+    color: black;
+    font-family: Roboto;
+}
+
+.quote {
+    background-color: #E5E7EB;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.quote p {
+    font-size: 36px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    color: #1f2937;
+    width: 70%;
+}
+
+.quoteauthor {
+    margin-top: -30px;
+    text-align: right;
+}
+
+#signup {
+    height: 350px;
+    display: flex;
+
+}
+
+.signupcard {
+    background-color: #3882f6;
+    height: 150px;
+    width: 1000px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+h2 {
+    color: #E5E7EB;
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+.button1 {
+    background-color: #3882F6;
+    border-color: white;
+    color: #E5E7EB;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border-style: dotted;
+    cursor: pointer;
+    font-family: Roboto;
+    margin: 10px;
+}
+.footer{
+    background-color: #1f2937;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
