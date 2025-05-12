@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+  
+.main{
+    height:100vh;
+    display: flex;
+}
+
+.desc{
+    padding-right: 150px;
+
+}
+.desc1,.desc2{
+    padding:0px 0px 40px 40px;
+    font-size: 1.5rem;
+}
+.form{
+    font-size: 1.5rem;
+    background-color: white;
+    height: 30%;
+    padding-left: 40px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.full-form{
+    /* padding:5px; */
+    /* display: grid;
+    grid-template-columns: repeat(2,1fr); */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+
+    /* gap: 10px; */
+}
+.inputRow{
+    display: flex;
+    gap: 80px;
+}
+.inputItems{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 0.8rem;
+    width: 200px;
+    margin-top: 10px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #b0ecba76;
+
+}
+.footer{
+    padding: 0px 0px 40px 40px;
+}
+.create-acc{
+    border-radius: 5px;
+    background-color: #596D48;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 20px;
+    height: 3.5rem;
+    width: 16rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;     
+    justify-content: center;
+    box-shadow: 1px 2px gray;
+}
+.footer-desc{
+    margin-top: 30px;
+}
+.login{
+    color: #596D48;
+}
+.hero{
+    width: 40%;
+    background-image: url("tree.avif");
+    background-size: cover;
+    background-position: center;
+}
+.odin-logo{
+    height: 10rem;
+    width: 10rem;
+}
+.left{
+    display: flex;
+    color: white;
+    margin-top: 200px;
+    margin-left: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+}
