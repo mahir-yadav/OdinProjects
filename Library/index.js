@@ -103,13 +103,13 @@ function showLibrary(library) {
             } else {
                 library[ind].status = "Read";
             }
-            books[0].innerHTML = "";
+            books[0].innerHTML = "";    
             showLibrary(library);
         });
     });
 }
 addBookToLibrary("Harry Potter", "J. K. Rowling", "109", "Unread");
 addBookToLibrary("The Lord of the Rings", "J.R.R. Tolkien", "1178", "Urnead");
-addBookToLibrary("To Kill a Mockingbird", "Harper Lee", "281", "Unread");
+addBookToLibrary("To Kill a Mockingbird", "Harper Lee", "281", "Read");
 
 showLibrary(myLibrary);
