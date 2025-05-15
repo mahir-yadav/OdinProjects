@@ -4,7 +4,10 @@ const dialog = document.getElementById("bookform");
 const confirmBtn = document.getElementById("confirmBtn");
 
 let library = [];
+dialog.addEventListener("close", () => {
+    dialog.querySelector("form").reset();
 
+});
 addBookBtn.addEventListener("click", () => {
     dialog.showModal();
 });
@@ -29,6 +32,7 @@ confirmBtn.addEventListener("click", (e) => {
     books[0].innerHTML = "";
     showLibrary(myLibrary);
     dialog.close();
+    dialog.querySelector("form").reset();
 });
 
 const myLibrary = []
@@ -66,14 +70,19 @@ function showLibrary(library) {
         deleteButton.setAttribute("type", "button");
         deleteButton.setAttribute("book-id", book.id);
         deleteButton.textContent = "Delete";
-
+        deleteButton.classList.add("delete-btn");
         let markedButton = document.createElement("button");
         markedButton.setAttribute("type", "button");
         markedButton.setAttribute("book-id", book.id);
         if (book.status == "Read") {
             markedButton.textContent = "Mark as Unread";
+            markedButton.classList.add("mark-read");
+
+
         } else {
             markedButton.textContent = "Mark as Read";
+            markedButton.classList.add("mark-unread");
+
         }
         buttons.appendChild(deleteButton);
         buttons.appendChild(markedButton);
@@ -97,17 +106,10 @@ function showLibrary(library) {
             books[0].innerHTML = "";
             showLibrary(library);
         });
-
-
-
     });
 }
 addBookToLibrary("Harry Potter", "J. K. Rowling", "109", "Unread");
 addBookToLibrary("The Lord of the Rings", "J.R.R. Tolkien", "1178", "Urnead");
 addBookToLibrary("To Kill a Mockingbird", "Harper Lee", "281", "Unread");
-addBookToLibrary("1984", "George Orwell", "328", "Read");
-addBookToLibrary("Pride and Prejudice", "Jane Austen", "432", "Unread");
-addBookToLibrary("The Catcher in the Rye", "J.D. Salinger", "277", "Unread");
-addBookToLibrary("The Da Vinci Code", "Dan Brown", "489", "Unread");
-addBookToLibrary(" The Alchemist", "Paulo Coelho", "208", "Read");
+
 showLibrary(myLibrary);

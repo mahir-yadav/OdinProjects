@@ -1,19 +1,36 @@
 * {
     margin: 0;
     padding: 0;
+    /* outline: 1px solid red; */
 }
-
 .header {
     display: flex;
     justify-content: space-between;
     background-color: rgb(29, 99, 231);
     color: white;
+    height: 80px;
 }
 
 .card {
     height: 200px;
     width: 200px;
     background-color: rgb(144, 175, 234);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* box-shadow: 2px 2px gray; */
+    box-shadow: -8px 0px rgb(29, 99, 231);
+
+    justify-content: center;
+}
+
+.card:hover {
+    background-color: rgb(116, 153, 226);
+    transform: scale(1.07);
+    transition: 0.5s ease-out;
 }
 
 .main {
@@ -25,5 +42,128 @@
 .content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: blue;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.heading {
+    font-size: 2rem;
+    padding: 20px;
+}
+
+.add-btn {
+    padding: 15px;
+    padding-right: 50px;
+}
+
+.card-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addbook {
+    background-color: rgb(144, 175, 234);
+    height: 50px;
+    width: 120px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.addbook:hover {
+    background-color: rgb(116, 153, 226);
+}
+
+.card-btn>button {
+    border-radius: 10px;
+    color: white;
+    padding: 8px;
+}
+
+.card-btn>button:hover {
+    transform: scale(1.07);
+
+}
+
+.mark-unread {
+    background-color: green;
+}
+
+.mark-unread:hover {
+    background-color: rgb(3, 101, 3);
+    transform: scale(1.07);
+
+}
+
+.mark-read,
+.delete-btn {
+    background-color: red;
+}
+
+.mark-read:hover,
+.delete-btn:hover {
+    background-color: rgb(239, 7, 7);
+    transform: scale(1.07);
+
+}
+
+.dialogbook {
+    border-radius: 10px;
+    padding: 20px 30px;
+    background: rgb(116, 153, 226);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.dialogbook form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dialogbook input[type="text"],
+.dialogbook input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.dialogbook div:last-child {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.dialogbook button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.dialogbook button#confirmBtn {
+    background-color: green;
+    color: white;
+}
+
+.dialogbook button#confirmBtn:hover {
+    background-color: #1f8536;
+}
+
+.dialogbook button[formmethod="dialog"] {
+    background-color: red;
+    color: white;
+}
+
+.dialogbook button[formmethod="dialog"]:hover {
+    background-color: #b52a38;
 }
