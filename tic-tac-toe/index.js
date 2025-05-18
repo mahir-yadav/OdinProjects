@@ -47,8 +47,8 @@ function playGame(player1name, player2name, player1sign) {
     const player2 = createPlayer(player2name, player2sign);
     const buttons = document.querySelectorAll(".spot");
     const status = document.createElement("div");
-
-    document.body.appendChild(status);
+    const gameContainer = document.getElementById("game-container");
+    gameContainer.appendChild(status);
     status.setAttribute("class", "status");
     let curPlayer = player1;
     status.textContent = `${curPlayer.name}'s turn`;
@@ -114,11 +114,16 @@ function playGame(player1name, player2name, player1sign) {
 
 
     }
+    const buttonGroup = document.createElement("div");
+    buttonGroup.setAttribute("class", "buttons");
+    gameContainer.appendChild(buttonGroup);
+
     const restartButton = document.createElement("button");
     restartButton.textContent = "Restart";
+
     restartButton.addEventListener("click", restartGame);
     restartButton.setAttribute("class", "restart-btn");
-    document.body.appendChild(restartButton);
+    buttonGroup.appendChild(restartButton);
     const HomeButton = document.createElement("button");
     HomeButton.textContent = "Home";
     HomeButton.addEventListener("click", () => {
@@ -135,7 +140,7 @@ function playGame(player1name, player2name, player1sign) {
         radioButtons.forEach(radio => radio.checked = false);
     });
     HomeButton.setAttribute("class", "home-btn");
-    document.body.appendChild(HomeButton);
+    buttonGroup.appendChild(HomeButton);
 
 }
 document.getElementById("start-btn").addEventListener("click", () => {
