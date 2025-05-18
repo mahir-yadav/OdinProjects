@@ -49,6 +49,7 @@ function playGame(player1name, player2name, player1sign) {
     const status = document.createElement("div");
 
     document.body.appendChild(status);
+    status.setAttribute("class", "status");
     let curPlayer = player1;
     status.textContent = `${curPlayer.name}'s turn`;
 
@@ -96,14 +97,31 @@ function playGame(player1name, player2name, player1sign) {
     const restartButton = document.createElement("button");
     restartButton.textContent = "Restart";
     restartButton.addEventListener("click", restartGame);
+    restartButton.setAttribute("class", "restart-btn");
     document.body.appendChild(restartButton);
+    const HomeButton = document.createElement("button");
+    HomeButton.textContent = "Home";
+    HomeButton.addEventListener("click", () => {
+        document.getElementById("start-screen").style.display = "flex";
+        document.getElementById("game-board").style.display = "none";
+        document.getElementsByClassName("restart-btn")[0].style.display = "none";
+        document.getElementsByClassName("home-btn")[0].style.display = "none";
+        document.getElementsByClassName("status")[0].style.display = "none";
 
+        document.getElementById("player1-name").value = "";
+        document.getElementById("player2-name").value = "";
+
+        const radioButtons = document.querySelectorAll('input[name="player1-sign"]');
+        radioButtons.forEach(radio => radio.checked = false);
+    });
+    HomeButton.setAttribute("class", "home-btn");
+    document.body.appendChild(HomeButton);
 
 }
 document.getElementById("start-btn").addEventListener("click", () => {
     const p1name = document.getElementById("player1-name").value;
     const p2name = document.getElementById("player2-name").value;
-    const p1sign = document.querySelector('input[name="player1-sign"]:checked');
+    const p1sign = document.querySelector('input[name="player1-sign"]:checked').value;
     if (!p1sign) {
         alert("Please choose a sign for Player 1.");
         return;
@@ -111,5 +129,10 @@ document.getElementById("start-btn").addEventListener("click", () => {
     document.getElementById("start-screen").style.display = "none";
     document.getElementById("game-board").style.display = "grid";
     playGame(p1name, p2name, p1sign);
+
+    document.getElementsByClassName("restart-btn")[0].style.display = "";
+    document.getElementsByClassName("home-btn")[0].style.display = "";
+    document.getElementsByClassName("status")[0].style.display = "flex";
+
 });
 
