@@ -103,8 +103,11 @@ function playGame(player1name, player2name, player1sign) {
 document.getElementById("start-btn").addEventListener("click", () => {
     const p1name = document.getElementById("player1-name").value;
     const p2name = document.getElementById("player2-name").value;
-    const p1sign = document.getElementById("player1-sign").value;
-
+    const p1sign = document.querySelector('input[name="player1-sign"]:checked');
+    if (!p1sign) {
+        alert("Please choose a sign for Player 1.");
+        return;
+    }
     document.getElementById("start-screen").style.display = "none";
     document.getElementById("game-board").style.display = "grid";
     playGame(p1name, p2name, p1sign);

@@ -10,13 +10,30 @@
     <div class="main">
         <h1>Tic Tac Toe</h1>
         <div id="start-screen">
-            <input type="text" id="player1-name" placeholder="Player 1 Name">
-            <input type="text" id="player2-name" placeholder="Player 2 Name">
-            <select id="player1-sign">
-                <option value="X">X</option>
-                <option value="O">O</option>
-            </select>
-            <button id="start-btn">Start Game</button>
+            <div class="start-box">
+                <input type="text" id="player1-name" placeholder="Player 1 Name">
+                <input type="text" id="player2-name" placeholder="Player 2 Name">
+                <!-- <select id="player1-sign" required>
+                    <option value="" disabled selected hidden>Player 1 chooses...</option>
+                    <option value="X">X</option>
+                    <option value="O">O</option>
+                </select> -->
+                <div class="sign-container">
+                    <p class="sign-title">Player 1 Choose:</p>
+                    <div class="sign-choice">
+                      <label>
+                        <input type="radio" name="player1-sign" value="X" required />
+                        <span>X</span>
+                      </label>
+                      <label>
+                        <input type="radio" name="player1-sign" value="O" />
+                        <span>O</span>
+                      </label>
+                    </div>
+                  </div>
+                <button id="start-btn">Start Game</button>
+            </div>
+
         </div>
         <div class="box" id="game-board" style="display: none;">
             <button class="spot" data-index="0"></button>

@@ -1,11 +1,102 @@
-.spot{
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    /* outline: 1px solid red; */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.spot {
     height: 100px;
     width: 100px;
 
 }
-.box{
-    max-width:300px;
+
+.box {
+    max-width: 300px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+}
+
+h1 {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+#start-screen {
+    display: flex;
+    width: 300px;
+    height: 20rem;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    margin-top: 10rem;
+}
+
+.start-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+#player1-name,
+#player2-name,
+#start-btn,
+#player1-sign {
+    background-color: white;
+    border-radius: 2rem;
+    height: 0.9rem;
+    padding: 1rem;
+    border: none;
+}
+
+#player1-sign {
+    color: black;
+}
+
+#start-btn {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    background-color: green;
+    border: none;
+    color: white;
+    font-size: 1rem;
+}
+
+#start-btn:hover {
+    background-color: rgb(2, 113, 2);
+}
+
+.sign-choice {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.sign-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sign-title {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0;
 }
