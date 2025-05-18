@@ -9,7 +9,16 @@
 <body>
     <div class="main">
         <h1>Tic Tac Toe</h1>
-        <div class="box">
+        <div id="start-screen">
+            <input type="text" id="player1-name" placeholder="Player 1 Name">
+            <input type="text" id="player2-name" placeholder="Player 2 Name">
+            <select id="player1-sign">
+                <option value="X">X</option>
+                <option value="O">O</option>
+            </select>
+            <button id="start-btn">Start Game</button>
+        </div>
+        <div class="box" id="game-board" style="display: none;">
             <button class="spot" data-index="0"></button>
             <button class="spot" data-index="1"></button>
             <button class="spot" data-index="2"></button>

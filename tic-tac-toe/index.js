@@ -41,9 +41,10 @@ function createPlayer(name, sign) {
 }
 
 
-function playGame() {
-    const player1 = createPlayer('me', 'X');
-    const player2 = createPlayer('you', 'O');
+function playGame(player1name, player2name, player1sign) {
+    const player2sign = (player1sign == 'O') ? 'X' : 'O';
+    const player1 = createPlayer(player1name, player1sign);
+    const player2 = createPlayer(player2name, player2sign);
     const buttons = document.querySelectorAll(".spot");
     const status = document.createElement("div");
 
@@ -99,4 +100,13 @@ function playGame() {
 
 
 }
-playGame();
+document.getElementById("start-btn").addEventListener("click", () => {
+    const p1name = document.getElementById("player1-name").value;
+    const p2name = document.getElementById("player2-name").value;
+    const p1sign = document.getElementById("player1-sign").value;
+
+    document.getElementById("start-screen").style.display = "none";
+    document.getElementById("game-board").style.display = "grid";
+    playGame(p1name, p2name, p1sign);
+});
+
