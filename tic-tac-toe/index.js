@@ -16,17 +16,17 @@ const gameBoard = (function () {
         //6 7 8
         for (let i = 0; i < 3; i++) {
             if (board[i] == board[i + 3] && board[i + 3] == board[i + 6] && (board[i] != '')) {
-                return true;
+                return [i, i + 3, i + 6];
             }
         }
         for (let i = 0; i < 9; i += 3) {
             if (board[i] == board[i + 1] && board[i + 1] == board[i + 2] && (board[i] != '')) {
-                return true;
+                return [i, i + 1, i + 2];
             }
         }
-        if (board[0] == board[4] && board[4] == board[8] && board[0] != '') return true;
-        if (board[2] == board[4] && board[4] == board[6] && board[2] != '') return true;
-        return false;
+        if (board[0] == board[4] && board[4] == board[8] && board[0] != '') return [0, 4, 8];
+        if (board[2] == board[4] && board[4] == board[6] && board[2] != '') return [2, 4, 6];
+        return null;
     }
     function isTie() {
         return board.every(cell => cell != '');
@@ -67,13 +67,24 @@ function playGame(player1name, player2name, player1sign) {
         const placed = gameBoard.placeSign(ind, curPlayer.sign);
         if (!placed) return;
         renderBoard();
-        if (gameBoard.checkForWin()) {
+        const winning = gameBoard.checkForWin();
+        if (winning) {
             status.textContent = `${curPlayer.name} Wins!`
-            gameOver = true; return;
+            gameOver = true;
+            winning.forEach(ele => {
+                const cell = document.querySelector(`.spot[data-index="${ele}"]`);
+                cell.classList.add("win");
+                cell.classList.add("blink");
+            });
+            document.querySelector(".restart-btn").classList.add("blink");
+            return;
         }
         if (gameBoard.isTie()) {
             status.textContent = `It's a tie!`
-            gameOver = true; return;
+            gameOver = true;
+            document.querySelector(".restart-btn").classList.add("blink");
+
+            return;
         }
         if (curPlayer === player1) {
             curPlayer = player2;
@@ -93,6 +104,15 @@ function playGame(player1name, player2name, player1sign) {
         gameOver = false;
         renderBoard();
         status.textContent = `${curPlayer.name}'s turn`;
+        document.querySelectorAll(".spot").forEach(cell => {
+            cell.classList.remove("win");
+            cell.classList.remove("blink");
+
+
+        });
+        document.querySelector(".restart-btn").classList.remove("blink");
+
+
     }
     const restartButton = document.createElement("button");
     restartButton.textContent = "Restart";

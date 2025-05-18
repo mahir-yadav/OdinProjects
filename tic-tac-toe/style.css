@@ -84,7 +84,8 @@ h1 {
 }
 
 #start-btn:hover,
-.restart-btn:hover,.home-btn:hover {
+.restart-btn:hover,
+.home-btn:hover {
     background-color: rgb(2, 113, 2);
 }
 
@@ -122,7 +123,8 @@ h1 {
 }
 
 
-.restart-btn,.home-btn {
+.restart-btn,
+.home-btn {
     margin-top: 2rem;
     width: 10rem;
     background-color: white;
@@ -133,4 +135,36 @@ h1 {
     border-radius: 1rem;
     border: none;
     background-color: green;
+}
+
+.win {
+    background-color: #4caf50;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+    color: white;
+    font-weight: bold;
+}
+
+.blink {
+    animation: blink 1s infinite;
+    background-color: #4caf50;
+    color: white;
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+        scale: 1.1;
+    }
+
+    50% {
+        opacity: 0.8;
+        scale: 1;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1.1;
+    }
 }
