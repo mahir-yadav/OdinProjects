@@ -136,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"da3fd7f1c5875d127e1c.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/about-image.jpg?");
+eval("module.exports = __webpack_require__.p + \"7c4285ee3973109e0722.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/about-image.jpg?");
 
 /***/ }),
 
@@ -146,7 +146,7 @@ eval("module.exports = __webpack_require__.p + \"da3fd7f1c5875d127e1c.jpg\";\n\n
   \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"51c2af9459e561fb8e70.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/burger.jpg?");
+eval("module.exports = __webpack_require__.p + \"321ff82876f9e143943b.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/burger.jpg?");
 
 /***/ }),
 
@@ -156,7 +156,7 @@ eval("module.exports = __webpack_require__.p + \"51c2af9459e561fb8e70.jpg\";\n\n
   \******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"1d14d2911874e13196c0.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/hakka.jpg?");
+eval("module.exports = __webpack_require__.p + \"9812eb7b875c7a07ac54.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/hakka.jpg?");
 
 /***/ }),
 
@@ -166,7 +166,7 @@ eval("module.exports = __webpack_require__.p + \"1d14d2911874e13196c0.jpg\";\n\n
   \*********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"93510df3a5275a62565b.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/lavacake.jpg?");
+eval("module.exports = __webpack_require__.p + \"047a8b57a44a3fba9afd.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/lavacake.jpg?");
 
 /***/ }),
 
@@ -176,7 +176,7 @@ eval("module.exports = __webpack_require__.p + \"93510df3a5275a62565b.jpg\";\n\n
   \***********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"d830e92072ffe7d0d374.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/menu-image.jpg?");
+eval("module.exports = __webpack_require__.p + \"f29857c07bd49dfccb05.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/menu-image.jpg?");
 
 /***/ }),
 
@@ -186,7 +186,7 @@ eval("module.exports = __webpack_require__.p + \"d830e92072ffe7d0d374.jpg\";\n\n
   \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"eaf1ca9db15978de96b7.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/paneer.jpg?");
+eval("module.exports = __webpack_require__.p + \"0252ece68eb44ca8d39c.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/paneer.jpg?");
 
 /***/ }),
 
@@ -196,7 +196,7 @@ eval("module.exports = __webpack_require__.p + \"eaf1ca9db15978de96b7.jpg\";\n\n
   \******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"4bf168b60ba312f6726a.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/pasta.jpg?");
+eval("module.exports = __webpack_require__.p + \"7d1650b60d55b23e4e52.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/pasta.jpg?");
 
 /***/ }),
 
@@ -206,7 +206,7 @@ eval("module.exports = __webpack_require__.p + \"4bf168b60ba312f6726a.jpg\";\n\n
   \******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"dba2a67e8807469e646b.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/pizza.jpg?");
+eval("module.exports = __webpack_require__.p + \"8075ceb51cf71ec70db4.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/pizza.jpg?");
 
 /***/ }),
 
@@ -216,7 +216,7 @@ eval("module.exports = __webpack_require__.p + \"dba2a67e8807469e646b.jpg\";\n\n
   \********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"5540157fbec5d3e0f4ba.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/restaurant-interior.jpg?");
+eval("module.exports = __webpack_require__.p + \"1947604eed0fcddda788.jpg\";\n\n//# sourceURL=webpack://resturant-page/./src/images/restaurant-interior.jpg?");
 
 /***/ }),
 
