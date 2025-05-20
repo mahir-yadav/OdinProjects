@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* outline: 1px solid red; */
+}
+
+#content {
+    background-image: url("./images/restaurant-interior.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+
+
+}
+
+nav {
+    display: flex;
+    gap: 5rem;
+    padding: 20px 40px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+nav button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+nav button:hover {
+    color: #f9c74f;
+    text-decoration: underline;
+}
+
+nav button.active {
+    color: #f9c74f;
+    text-decoration: underline;
+}
+
+#content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    pointer-events: none;
+}
+
+#content>div {
+    color: white;
+    z-index: 2;
+    position: relative;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#content>div:hover {
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#content>div h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+}
+
+#content>div p {
+    font-size: 1.4rem;
+    margin-bottom: 1.5em;
+}
+
+#content>div button {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border: 2px solid #f9c74f;
+    border-radius: 5px;
+    background: transparent;
+    color: #f9c74f;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#content>div button:hover {
+    background-color: #f9c74f;
+    color: black;
+}
