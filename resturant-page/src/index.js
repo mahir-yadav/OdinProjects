@@ -1,6 +1,7 @@
 import './style.css';
 import { load_homepage } from "./home.js";
 import { load_menu } from "./menu.js";
+import { load_about } from "./about.js";
 
 const buttons = document.querySelectorAll("nav > button");
 const content = document.getElementById("content");
@@ -20,6 +21,7 @@ buttons.forEach(button => {
         } else if (button.textContent === "Menu") {
             load_menu(content);
         } else if (button.textContent === "About") {
+            load_about(content);
         }
     });
 });

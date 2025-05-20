@@ -57,7 +57,8 @@ nav button.active {
 }
 
 .home-page::before,
-.menu-hero::before {
+.menu-hero::before,
+.about-hero::before {
     content: "";
     position: absolute;
     top: 0;
@@ -70,7 +71,8 @@ nav button.active {
 }
 
 .home-content,
-.menu-hero>h1 {
+.menu-hero>h1,
+.about-hero>h1 {
     color: white;
     z-index: 2;
     position: relative;
@@ -84,7 +86,8 @@ nav button.active {
 }
 
 .home-content:hover,
-.menu-hero>h1:hover {
+.menu-hero>h1:hover,
+.about-hero>h1:hover {
     background: rgba(0, 0, 0, 0.6);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
@@ -117,14 +120,16 @@ nav button.active {
     color: black;
 }
 
-.menu-page {
+.menu-page,
+.about-page {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     width: 100%;
 }
 
-.menu-hero {
+.menu-hero,
+.about-hero {
     background-image: url('./images/menu-image.jpg');
     background-size: cover;
     background-position: center;
@@ -138,7 +143,8 @@ nav button.active {
 
 }
 
-.menu-hero>h1 {
+.menu-hero>h1,
+.about-hero>h1 {
     font-size: 3rem;
 }
 
@@ -176,4 +182,60 @@ nav button.active {
     height: 17rem;
     width: 100%;
     border-radius: 12px;
+}
+
+.about-hero {
+    background-image: url('./images/about-image.jpg');
+}
+.about-content{
+    background-color: rgb(54, 52, 52);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    padding: 10px;
+    margin-top: 2rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.about-container h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    color: #f9c74f;
+    
+}
+
+.about-container p,
+.about-container ul {
+    font-size: 1.2rem;
+    margin-top: 0.5em;
+    color: white;
+}
+
+.about-container ul li {
+    margin-bottom: 0.4em;
+}
+
+.about-container a {
+    text-decoration: none;
+}
+
+.about-container a:hover {
+    text-decoration: underline;
+}
+
+.about-container iframe {
+    margin-top: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
