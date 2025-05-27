@@ -25,6 +25,7 @@ function renderProject(project, container) {
         todoDiv.appendChild(checkbox);
         const delete_btn = document.createElement('button');
         delete_btn.textContent = 'Delete';
+        delete_btn.classList.add('delete-btn');
         todoDiv.appendChild(delete_btn);
         delete_btn.addEventListener('click', () => {
             const index = project.getTodos().indexOf(todo);

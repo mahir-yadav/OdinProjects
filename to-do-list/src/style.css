@@ -55,3 +55,79 @@ body {
     background: #2980b9;
     color: white;
 }
+
+.todo-main {
+    flex: 1;
+    padding: 20px;
+    background: #ecf0f1;
+}
+
+.todo-item {
+    display: flex;
+    background: white;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.todo-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.todo-due {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.low-priority {
+    box-shadow: -0.6rem 0px green;
+
+
+}
+
+.medium-priority {
+    box-shadow: -0.6rem 0px orange;
+
+}
+
+.high-priority {
+    box-shadow: -0.6rem 0px red;
+
+}
+
+.delete-btn {
+    background: #e74c3c;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+#sidebar::-webkit-scrollbar,
+.todo-main::-webkit-scrollbar {
+    width: 6px;
+}
+
+#sidebar::-webkit-scrollbar-thumb,
+.todo-main::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
