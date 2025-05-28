@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* outline: 1px solid red; */
 }
 
 body {
@@ -38,6 +39,8 @@ body {
     background: #22476c;
     color: #ecf0f1;
     padding: 20px;
+    overflow-y: auto;
+
 }
 
 .div-heading {
@@ -81,18 +84,24 @@ body {
     flex: 1;
     padding: 20px;
     background: #ecf0f1;
+    overflow-y: auto;
+
 }
 
 .todo-item {
     display: grid;
     background: white;
-    grid-template-columns: 2fr 1fr 1fr 0.5fr 0.5fr;
+    grid-template-columns: 2fr 1fr 0.5fr 0.3fr 0.2fr;
     align-items: center;
     border-radius: 5px;
     padding: 15px 20px;
     margin-bottom: 15px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     font-size: 1.3rem;
+}
+.todo-item>input{
+    height: 1.9rem;
+    width: 1.9rem;
 }
 
 .todo-title {
@@ -136,11 +145,13 @@ body {
     width: 3.5rem;
 
 }
-.edit-btn:hover{
+
+.edit-btn:hover {
     background-color: rgb(2, 179, 2);
     color: white;
 
 }
+
 .delete-btn:hover {
     background: rgb(225, 67, 67);
     color: white;

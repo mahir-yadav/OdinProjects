@@ -1,6 +1,6 @@
 import Project from "./project.js";
-
-function renderProject(project, container) {
+import Todo from "./todo.js";
+function renderProject(projects, project, container) {
     container.innerHTML = '';
     const div_heading = document.createElement('div');
     div_heading.classList.add("div-heading");
@@ -25,7 +25,9 @@ function renderProject(project, container) {
         if (!title) return;
 
         project.addTodo(title, dueDate, priority);
-        renderProject(project, document.querySelector('.todo-main'));
+        renderProject(projects, project, document.querySelector('.todo-main'));
+        saveToLocalStorage(projects);
+
     });
     project.getTodos().forEach((todo) => {
         const todoDiv = document.createElement('div');
@@ -44,9 +46,15 @@ function renderProject(project, container) {
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.checked = todo.completed;
+        if (todo.completed) {
+            todoDiv.classList.add('completed');
+
+        }
         checkbox.addEventListener('change', () => {
             todo.toggle();
             todoDiv.classList.toggle('completed', todo.completed);
+            saveToLocalStorage(projects);
+
         });
         todoDiv.appendChild(checkbox);
         const delete_btn = document.createElement('button');
@@ -66,7 +74,9 @@ function renderProject(project, container) {
         delete_btn.addEventListener('click', () => {
             const index = project.getTodos().indexOf(todo);
             project.deleteToDo(index);
-            renderProject(project, document.querySelector('.todo-main'));
+            renderProject(projects, project, document.querySelector('.todo-main'));
+
+            saveToLocalStorage(projects);
 
         });
         edit_btn.addEventListener('click', () => {
@@ -76,10 +86,11 @@ function renderProject(project, container) {
             const npriority = prompt('Enter priority (low/medium/high):');
 
             if (!title) return;
-            title.textContent = ntitle;
-            dueDate.textContent = ndueDate;
+            todo.update(ntitle, ndueDate, npriority, false);
+            saveToLocalStorage(projects);
             todoDiv.classList.remove(`${todo.priority}-priority`);
             todoDiv.classList.add(`${npriority}-priority`);
+            renderProject(projects, project, document.querySelector('.todo-main'));
 
 
         });
@@ -112,7 +123,37 @@ function renderSidebar(projects, onSelectProject) {
         const newProject = new Project(name);
         projects.push(newProject);
         renderSidebar(projects, onSelectProject);
+        saveToLocalStorage(projects);
+
     });
     sidebar.appendChild(addProjectBtn);
 }
-export { renderProject, renderSidebar };
+function saveToLocalStorage(projects) {
+    const data = projects.map(project => ({
+        name: project.name,
+        todos: project.getTodos().map(todo => ({
+            title: todo.title,
+            dueDate: todo.dueDate,
+            priority: todo.priority,
+            completed: todo.completed
+        }))
+    }));
+    localStorage.setItem('todoProjects', JSON.stringify(data));
+}
+function loadFromLocalStorage() {
+    const raw = localStorage.getItem('todoProjects');
+    if (!raw) return [];
+
+    const parsed = JSON.parse(raw);
+    return parsed.map(p => {
+        const proj = new Project(p.name);
+        p.todos.forEach(t => {
+            const todo = new Todo(t.title, t.dueDate, t.priority);
+            if (t.completed) todo.toggle();
+            proj.todos.push(todo);
+        });
+        return proj;
+    });
+}
+
+export { renderProject, renderSidebar, saveToLocalStorage, loadFromLocalStorage };

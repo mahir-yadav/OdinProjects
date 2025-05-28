@@ -1,12 +1,18 @@
 class Todo {
-    constructor(title, dueDate, priority) {
+    constructor(title, dueDate, priority, completed = false) {
         this.title = title;
         this.dueDate = dueDate;
         this.priority = priority;
-        this.completed = false;
+        this.completed = completed;
     }
     toggle() {
         this.completed = !this.completed;
+    }
+    update(title, dueDate, priority, completed) {
+        this.title = title;
+        this.dueDate = dueDate;
+        this.priority = priority;
+        this.completed = completed;
     }
 }
 
