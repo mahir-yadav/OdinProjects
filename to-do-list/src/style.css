@@ -86,7 +86,7 @@ body {
 .todo-item {
     display: grid;
     background: white;
-    grid-template-columns: 2fr 1fr 1fr 0.5fr;
+    grid-template-columns: 2fr 1fr 1fr 0.5fr 0.5fr;
     align-items: center;
     border-radius: 5px;
     padding: 15px 20px;
@@ -123,7 +123,8 @@ body {
 
 }
 
-.delete-btn {
+.delete-btn,
+.edit-btn {
     border: none;
     background-color: white;
     color: black;
@@ -135,7 +136,11 @@ body {
     width: 3.5rem;
 
 }
+.edit-btn:hover{
+    background-color: rgb(2, 179, 2);
+    color: white;
 
+}
 .delete-btn:hover {
     background: rgb(225, 67, 67);
     color: white;
